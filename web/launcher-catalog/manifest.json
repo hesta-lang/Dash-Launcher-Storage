@@ -1,0 +1,10 @@
+{
+  "catalogVersion": 1,
+  "catalogId": "dash-launcher-storage",
+  "minLauncherVersion": "0.1.0",
+  "versionFiles": {
+    "stable": "versions/stable.json",
+    "beta": "versions/beta.json",
+    "archived": "versions/archived.json"
+  }
+}
