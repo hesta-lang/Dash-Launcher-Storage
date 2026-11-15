@@ -1,0 +1,33 @@
+name: Validate Dash Launcher catalog
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "catalog/**"
+      - "scripts/validate_catalog.py"
+      - ".github/workflows/validate-catalog.yml"
+  pull_request:
+    branches: [main]
+    paths:
+      - "catalog/**"
+      - "scripts/validate_catalog.py"
+      - ".github/workflows/validate-catalog.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate public catalog
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate catalog
+        run: python scripts/validate_catalog.py
