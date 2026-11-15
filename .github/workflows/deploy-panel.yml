@@ -1,0 +1,46 @@
+name: Deploy Dash Launcher Storage panel
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "web/**"
+      - "catalog/**"
+      - ".github/workflows/deploy-panel.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Prepare panel data
+        run: |
+          cp catalog/catalog.json web/catalog.json
+          touch web/.nojekyll
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload panel
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: web
+
+      - name: Deploy panel
+        id: deployment
+        uses: actions/deploy-pages@v4
