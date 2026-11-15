@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Google Play",
+    "mark": "GP",
+    "status": "OFICIAL",
+    "status_class": "official",
+    "scope": "Geometry Dash completo · tienda oficial",
+    "description": "Ficha oficial de Geometry Dash de RobTop Games. Sirve como referencia de la versión vigente y compra; no ofrece un archivo público de versiones antiguas.",
+    "url": "https://play.google.com/store/apps/details?id=com.robtopx.geometryjump"
+  },
+  {
+    "name": "Uptodown",
+    "mark": "U",
+    "status": "PARCIAL",
+    "status_class": "partial",
+    "scope": "Lite y spin-offs · historial visible",
+    "description": "Tiene historial visible de Geometry Dash Lite y de World, Meltdown y otros spin-offs. No he confirmado un historial equivalente del Geometry Dash completo de pago.",
+    "url": "https://geometry-dash.uptodown.com/android/versions"
+  },
+  {
+    "name": "APKMirror",
+    "mark": "AM",
+    "status": "PARCIAL",
+    "status_class": "partial",
+    "scope": "Lite y spin-offs · listados de RobTop",
+    "description": "Se encuentran listados de Geometry Dash Lite, World, Meltdown y SubZero. La categoría consultada no confirma un archivo del juego completo de pago.",
+    "url": "https://www.apkmirror.com/categories/game_arcade/G/"
+  },
+  {
+    "name": "APKPure",
+    "mark": "AP",
+    "status": "PARCIAL",
+    "status_class": "partial",
+    "scope": "Geometry Dash World · historial",
+    "description": "El historial de versiones de Geometry Dash World está disponible y contiene varias versiones antiguas. No he confirmado el historial del juego completo.",
+    "url": "https://apkpure.net/geometry-dash-world/com.robtopx.geometrydashworld/versions"
+  },
+  {
+    "name": "APKCombo",
+    "mark": "AC",
+    "status": "LEGACY",
+    "status_class": "legacy",
+    "scope": "Geometry Dash completo · ficha antigua",
+    "description": "La ficha indexada del paquete com.robtopx.geometryjump muestra la versión 2.011 fechada en septiembre de 2015. Es una referencia histórica obsoleta, no un archivo completo actualizado.",
+    "url": "https://apkcombo.com/geometry-dash/com.robtopx.geometryjump/"
+  },
+  {
+    "name": "Uoldown",
+    "mark": "UD",
+    "status": "POR VALIDAR",
+    "status_class": "",
+    "scope": "Geometry Dash · listado de 8 versiones",
+    "description": "Publica un historial breve de ocho entradas (incluye 2.121, 2.11, 2.10, 1.92, 1.81 y 1.61). Hay que comprobar paquete, firma y procedencia de cada archivo antes de considerarlo utilizable.",
+    "url": "https://uoldown.com/android/geometry-dash/versions"
+  }
+]
