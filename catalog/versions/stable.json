@@ -6,8 +6,8 @@
     "channel": "stable",
     "platform": "android",
     "minAndroidApi": 26,
-    "releasedAt": "2026-10-18T00:00:00Z",
-    "changelog": "Referencia de versión reciente para Android; confirma la versión ofrecida en Google Play.",
+    "releasedAt": "2026-10-19T00:00:00Z",
+    "changelog": "Referencia externa del parche Android 2.2091. Google Play registra una actualización el 19/10/2026 y muestra las novedades de 2.209; verifica el número exacto ofrecido a tu dispositivo en la tienda.",
     "metadata": "../metadata/gd-2.2091-googleplay.json"
   }
 ]
