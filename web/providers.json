@@ -5,7 +5,7 @@
     "status": "OFICIAL",
     "status_class": "official",
     "scope": "Geometry Dash completo · tienda oficial",
-    "description": "Ficha oficial de Geometry Dash de RobTop Games. Sirve como referencia de la versión vigente y compra; no ofrece un archivo público de versiones antiguas.",
+    "description": "Ficha oficial de Geometry Dash de RobTop Games. La ficha registra una actualización el 19 de octubre de 2026 y muestra las novedades de 2.209; Dash Launcher la usa como referencia y no descarga ni aloja el APK.",
     "url": "https://play.google.com/store/apps/details?id=com.robtopx.geometryjump"
   },
   {
@@ -49,8 +49,8 @@
     "mark": "UD",
     "status": "POR VALIDAR",
     "status_class": "",
-    "scope": "Geometry Dash · listado de 8 versiones",
-    "description": "Publica un historial breve de ocho entradas (incluye 2.121, 2.11, 2.10, 1.92, 1.81 y 1.61). Hay que comprobar paquete, firma y procedencia de cada archivo antes de considerarlo utilizable.",
+    "scope": "Geometry Dash · historial de 8 entradas",
+    "description": "Muestra ocho versiones bajo el título Geometry Dash. No se ha verificado el package ID ni el certificado de firma de cada archivo; se mantiene solo como referencia externa, nunca como descarga interna.",
     "url": "https://uoldown.com/android/geometry-dash/versions"
   }
 ]
