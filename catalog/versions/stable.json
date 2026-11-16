@@ -5,7 +5,7 @@
     "version": "2.2091",
     "channel": "stable",
     "platform": "android",
-    "minAndroidApi": 23,
+    "minAndroidApi": 26,
     "releasedAt": "2026-10-18T00:00:00Z",
     "changelog": "Referencia de versión reciente para Android; confirma la versión ofrecida en Google Play.",
     "metadata": "../metadata/gd-2.2091-googleplay.json"
