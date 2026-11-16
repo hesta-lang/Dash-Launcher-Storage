@@ -43,16 +43,23 @@ The public catalog is `catalog/catalog.json`:
 }
 ```
 
-A published entry must include:
-- `id`: unique identifier.
-- `version`: version label.
-- `name`: display name.
-- `source`: HTTPS source URL.
-- `distribution_authorized`: must be `true`.
-- `sha256`: recommended 64-character SHA-256 digest.
-- `size_bytes`: recommended positive file size.
+The panel catalog accepts two explicit entry types:
 
-Only include an entry if the file is legally authorized for distribution. The validator rejects an entry unless `distribution_authorized` is explicitly `true`.
+- **Authorized distribution:** must set `distribution_authorized: true` and include a verified HTTPS file source. A direct launcher download additionally requires a known file size and SHA-256.
+- **External reference:** must set `entry_type: "external_reference"`, `distribution_authorized: false`, and `download_enabled: false`. It only links to a provider's own page; no APK is hosted or downloaded by Dash Launcher.
+
+Do not treat an external provider listing, attribution, or disclaimer as permission to redistribute a file. The validator checks that external references use the approved provider domains and are explicitly non-downloadable.
+
+## Android launcher catalog
+
+The Android client reads the separate launcher manifest at `catalog/manifest.json`, then loads the Stable, Beta, and Archived indexes from `catalog/versions/`. Per-version records are stored in `catalog/metadata/`.
+
+The current catalog contains:
+- **Stable:** a Google Play reference for the recent Android version.
+- **Archived:** historical provider references for versions listed by Uoldown and APKCombo.
+- **Beta:** empty until a public beta for the full game can be verified.
+
+External references open the provider page in the browser. They do not imply that the APK's package, signing certificate, architecture, or integrity has been independently verified. The launcher must not present those entries as direct APK downloads.
 
 ## Provider research
 
