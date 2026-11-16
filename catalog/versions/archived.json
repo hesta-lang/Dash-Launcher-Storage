@@ -1,1 +1,101 @@
-[]
+[
+  {
+    "id": "gd-2.21-uoldown",
+    "displayName": "Geometry Dash",
+    "version": "2.21",
+    "channel": "archived",
+    "platform": "android",
+    "minAndroidApi": 23,
+    "releasedAt": "2020-12-15T00:00:00Z",
+    "changelog": "Registro de Uoldown. El archivo y su firma no están validados por Dash Launcher.",
+    "metadata": "../metadata/gd-2.21-uoldown.json"
+  },
+  {
+    "id": "gd-2.2-uoldown",
+    "displayName": "Geometry Dash",
+    "version": "2.2",
+    "channel": "archived",
+    "platform": "android",
+    "minAndroidApi": 23,
+    "releasedAt": "2020-10-01T00:00:00Z",
+    "changelog": "Registro de Uoldown. El archivo y su firma no están validados por Dash Launcher.",
+    "metadata": "../metadata/gd-2.2-uoldown.json"
+  },
+  {
+    "id": "gd-2.121-uoldown",
+    "displayName": "Geometry Dash",
+    "version": "2.121",
+    "channel": "archived",
+    "platform": "android",
+    "minAndroidApi": 23,
+    "releasedAt": "2017-11-20T00:00:00Z",
+    "changelog": "Registro de Uoldown. El archivo y su firma no están validados por Dash Launcher.",
+    "metadata": "../metadata/gd-2.121-uoldown.json"
+  },
+  {
+    "id": "gd-2.11-uoldown",
+    "displayName": "Geometry Dash",
+    "version": "2.11",
+    "channel": "archived",
+    "platform": "android",
+    "minAndroidApi": 23,
+    "releasedAt": "2017-01-02T00:00:00Z",
+    "changelog": "Registro de Uoldown. El archivo y su firma no están validados por Dash Launcher.",
+    "metadata": "../metadata/gd-2.11-uoldown.json"
+  },
+  {
+    "id": "gd-2.10-uoldown",
+    "displayName": "Geometry Dash",
+    "version": "2.10",
+    "channel": "archived",
+    "platform": "android",
+    "minAndroidApi": 23,
+    "releasedAt": "2015-12-22T00:00:00Z",
+    "changelog": "Registro de Uoldown. El archivo y su firma no están validados por Dash Launcher.",
+    "metadata": "../metadata/gd-2.10-uoldown.json"
+  },
+  {
+    "id": "gd-2.011-apkcombo",
+    "displayName": "Geometry Dash",
+    "version": "2.011",
+    "channel": "archived",
+    "platform": "android",
+    "minAndroidApi": 23,
+    "releasedAt": "2015-09-30T00:00:00Z",
+    "changelog": "Registro legado de APKCombo. El archivo y su firma no están validados por Dash Launcher.",
+    "metadata": "../metadata/gd-2.011-apkcombo.json"
+  },
+  {
+    "id": "gd-1.92-uoldown",
+    "displayName": "Geometry Dash",
+    "version": "1.92",
+    "channel": "archived",
+    "platform": "android",
+    "minAndroidApi": 23,
+    "releasedAt": "2015-02-05T00:00:00Z",
+    "changelog": "Registro de Uoldown. El archivo y su firma no están validados por Dash Launcher.",
+    "metadata": "../metadata/gd-1.92-uoldown.json"
+  },
+  {
+    "id": "gd-1.81-uoldown",
+    "displayName": "Geometry Dash",
+    "version": "1.81",
+    "channel": "archived",
+    "platform": "android",
+    "minAndroidApi": 23,
+    "releasedAt": "2014-08-16T00:00:00Z",
+    "changelog": "Registro de Uoldown. El archivo y su firma no están validados por Dash Launcher.",
+    "metadata": "../metadata/gd-1.81-uoldown.json"
+  },
+  {
+    "id": "gd-1.61-uoldown",
+    "displayName": "Geometry Dash",
+    "version": "1.61",
+    "channel": "archived",
+    "platform": "android",
+    "minAndroidApi": 23,
+    "releasedAt": "2014-03-21T00:00:00Z",
+    "changelog": "Registro de Uoldown. El archivo y su firma no están validados por Dash Launcher.",
+    "metadata": "../metadata/gd-1.61-uoldown.json"
+  }
+]
