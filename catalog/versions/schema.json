@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Dash Launcher channel version index",
+  "description": "Small channel index. Full platform and artifact details live in a separate metadata JSON document.",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "id",
+      "displayName",
+      "version",
+      "channel",
+      "platform",
+      "minAndroidApi",
+      "metadata"
+    ],
+    "properties": {
+      "id": {
+        "type": "string",
+        "pattern": "^[a-zA-Z0-9._-]{1,96}$"
+      },
+      "displayName": {
+        "type": "string",
+        "minLength": 1
+      },
+      "version": {
+        "type": "string",
+        "minLength": 1
+      },
+      "channel": {
+        "enum": [
+          "stable",
+          "beta",
+          "archived"
+        ]
+      },
+      "platform": {
+        "const": "android"
+      },
+      "minAndroidApi": {
+        "type": "integer",
+        "minimum": 26
+      },
+      "releasedAt": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "format": "date-time"
+      },
+      "changelog": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "metadata": {
+        "type": "string",
+        "minLength": 1,
+        "description": "Relative JSON path to this version's metadata, resolved from this index file."
+      }
+    },
+    "additionalProperties": false
+  }
+}
