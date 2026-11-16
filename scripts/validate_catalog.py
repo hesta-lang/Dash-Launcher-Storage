@@ -77,6 +77,8 @@ def validate_panel_catalog() -> None:
                     fail(f"{prefix} external_reference must set distribution_authorized to false")
                 if item.get("download_enabled") is not False:
                     fail(f"{prefix} external_reference must set download_enabled to false")
+                if "package_name" in item or "signing_certificate_sha256" in item:
+                    fail(f"{prefix} external_reference cannot claim an unverified APK identity")
                 if not valid_https_url(item["source"], ALLOWED_EXTERNAL_HOSTS):
                     fail(f"{prefix}.source must be HTTPS on an approved external provider domain")
             else:
@@ -85,11 +87,16 @@ def validate_panel_catalog() -> None:
                 if item.get("distribution_authorized") is not True:
                     fail(f"{prefix} must explicitly set distribution_authorized to true")
                 digest = item.get("sha256")
-                if digest is not None and (not isinstance(digest, str) or not SHA_RE.fullmatch(digest)):
+                if not isinstance(digest, str) or not SHA_RE.fullmatch(digest):
                     fail(f"{prefix}.sha256 must contain exactly 64 hexadecimal characters")
                 size = item.get("size_bytes")
-                if size is not None and (not isinstance(size, int) or size <= 0):
+                if not isinstance(size, int) or size <= 0:
                     fail(f"{prefix}.size_bytes must be a positive integer")
+                if item.get("package_name") != "com.robtopx.geometryjump":
+                    fail(f"{prefix}.package_name must be the official Geometry Dash package")
+                signer = item.get("signing_certificate_sha256")
+                if not isinstance(signer, str) or not SHA_RE.fullmatch(signer):
+                    fail(f"{prefix}.signing_certificate_sha256 must be a verified 64-character SHA-256")
 
 
 def validate_launcher_indexes() -> None:
@@ -166,6 +173,8 @@ def validate_launcher_indexes() -> None:
                 if abis:
                     # ABI details must only be populated when verified.
                     fail(f"{metadata_path}: external-page references must not claim unverified ABIs")
+                if artifact.get("packageName") is not None or artifact.get("signingCertificateSha256") is not None:
+                    fail(f"{metadata_path}: external-page references cannot claim an unverified APK identity")
                 if artifact.get("sizeBytes") is not None or artifact.get("sha256") is not None:
                     fail(f"{metadata_path}: external-page references cannot claim APK size or SHA-256")
             elif provider == "direct":
@@ -179,6 +188,11 @@ def validate_launcher_indexes() -> None:
                     fail(f"{metadata_path}: direct artifact requires a positive sizeBytes")
                 if not isinstance(digest, str) or not SHA_RE.fullmatch(digest):
                     fail(f"{metadata_path}: direct artifact requires a valid SHA-256")
+                if artifact.get("packageName") != "com.robtopx.geometryjump":
+                    fail(f"{metadata_path}: direct artifact must declare the official Geometry Dash package")
+                signer = artifact.get("signingCertificateSha256")
+                if not isinstance(signer, str) or not SHA_RE.fullmatch(signer):
+                    fail(f"{metadata_path}: direct artifact requires a verified signer certificate SHA-256")
             else:
                 fail(f"{metadata_path}: unsupported provider '{provider}'")
 
