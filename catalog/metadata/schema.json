@@ -1,0 +1,146 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Dash Launcher per-version metadata",
+  "type": "object",
+  "required": [
+    "id",
+    "description",
+    "platform",
+    "minAndroidApi",
+    "supportedAbis",
+    "artifact"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9._-]{1,96}$"
+    },
+    "description": {
+      "type": "string"
+    },
+    "platform": {
+      "const": "android"
+    },
+    "minAndroidApi": {
+      "type": "integer",
+      "minimum": 26
+    },
+    "supportedAbis": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "arm64-v8a",
+          "armeabi-v7a",
+          "x86",
+          "x86_64"
+        ]
+      }
+    },
+    "artifact": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object",
+          "required": [
+            "provider"
+          ],
+          "properties": {
+            "provider": {
+              "enum": [
+                "direct",
+                "external-page"
+              ]
+            },
+            "providerName": {
+              "type": "string",
+              "minLength": 1
+            },
+            "url": {
+              "type": "string",
+              "format": "uri",
+              "pattern": "^https://"
+            },
+            "sizeBytes": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "^[a-fA-F0-9]{64}$"
+            }
+          },
+          "allOf": [
+            {
+              "if": {
+                "properties": {
+                  "provider": {
+                    "const": "direct"
+                  }
+                },
+                "required": [
+                  "provider"
+                ]
+              },
+              "then": {
+                "required": [
+                  "url",
+                  "sizeBytes",
+                  "sha256"
+                ]
+              }
+            },
+            {
+              "if": {
+                "properties": {
+                  "provider": {
+                    "const": "external-page"
+                  }
+                },
+                "required": [
+                  "provider"
+                ]
+              },
+              "then": {
+                "required": [
+                  "providerName",
+                  "url"
+                ],
+                "properties": {
+                  "url": {
+                    "pattern": "^https://(play\\\\.google\\\\.com|uoldown\\\\.com|www\\\\.uoldown\\\\.com|apkcombo\\\\.com|www\\\\.apkcombo\\\\.com)/"
+                  }
+                }
+              }
+            }
+          ],
+          "additionalProperties": false
+        }
+      ]
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "artifact": {
+            "properties": {
+              "provider": {
+                "const": "direct"
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "supportedAbis": {
+            "minItems": 1
+          }
+        }
+      }
+    }
+  ],
+  "additionalProperties": false
+}
