@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-15T20:06:00-04:00",
+  "updated_at": "2026-11-15T19:00:00Z",
   "channels": {
     "stable": [
       {
@@ -13,7 +13,7 @@
         "platform": "Android",
         "distribution_authorized": false,
         "download_enabled": false,
-        "notes": "Referencia de versión Android 2.2091. Confirma la versión vigente en la ficha oficial de Google Play; Dash Launcher no aloja el APK."
+        "notes": "Referencia externa de Geometry Dash para Android, identificada como parche 2.2091 en el historial consultado. Google Play registra una actualización el 19/10/2026; el número exacto ofrecido puede variar por dispositivo. No se aloja ni descarga el APK desde Dash Launcher."
       }
     ],
     "beta": [],
@@ -28,7 +28,7 @@
         "platform": "Android",
         "distribution_authorized": false,
         "download_enabled": false,
-        "notes": "Ficha histórica publicada por Uoldown (15/12/2020). Paquete, firma y arquitectura no verificados por Dash Launcher; abre la fuente externa y comprueba los datos antes de instalar."
+        "notes": "La página de Uoldown muestra esta versión bajo el título Geometry Dash. Dash Launcher no ha verificado el package ID, firma, arquitectura ni procedencia del APK; abre la ficha externa y comprueba esos datos antes de instalar."
       },
       {
         "id": "gd-2.2-uoldown",
@@ -40,7 +40,7 @@
         "platform": "Android",
         "distribution_authorized": false,
         "download_enabled": false,
-        "notes": "Ficha histórica publicada por Uoldown (01/10/2020). Paquete, firma y arquitectura no verificados por Dash Launcher; abre la fuente externa y comprueba los datos antes de instalar."
+        "notes": "La página de Uoldown muestra esta versión bajo el título Geometry Dash. Dash Launcher no ha verificado el package ID, firma, arquitectura ni procedencia del APK; abre la ficha externa y comprueba esos datos antes de instalar."
       },
       {
         "id": "gd-2.121-uoldown",
@@ -52,7 +52,7 @@
         "platform": "Android",
         "distribution_authorized": false,
         "download_enabled": false,
-        "notes": "Ficha histórica publicada por Uoldown (20/11/2017). Paquete, firma y arquitectura no verificados por Dash Launcher; abre la fuente externa y comprueba los datos antes de instalar."
+        "notes": "La página de Uoldown muestra esta versión bajo el título Geometry Dash. Dash Launcher no ha verificado el package ID, firma, arquitectura ni procedencia del APK; abre la ficha externa y comprueba esos datos antes de instalar."
       },
       {
         "id": "gd-2.11-uoldown",
@@ -64,7 +64,7 @@
         "platform": "Android",
         "distribution_authorized": false,
         "download_enabled": false,
-        "notes": "Ficha histórica publicada por Uoldown (02/01/2017). Paquete, firma y arquitectura no verificados por Dash Launcher; abre la fuente externa y comprueba los datos antes de instalar."
+        "notes": "La página de Uoldown muestra esta versión bajo el título Geometry Dash. Dash Launcher no ha verificado el package ID, firma, arquitectura ni procedencia del APK; abre la ficha externa y comprueba esos datos antes de instalar."
       },
       {
         "id": "gd-2.10-uoldown",
@@ -76,7 +76,7 @@
         "platform": "Android",
         "distribution_authorized": false,
         "download_enabled": false,
-        "notes": "Ficha histórica publicada por Uoldown (22/12/2015). Paquete, firma y arquitectura no verificados por Dash Launcher; abre la fuente externa y comprueba los datos antes de instalar."
+        "notes": "La página de Uoldown muestra esta versión bajo el título Geometry Dash. Dash Launcher no ha verificado el package ID, firma, arquitectura ni procedencia del APK; abre la ficha externa y comprueba esos datos antes de instalar."
       },
       {
         "id": "gd-2.011-apkcombo",
@@ -100,7 +100,7 @@
         "platform": "Android",
         "distribution_authorized": false,
         "download_enabled": false,
-        "notes": "Ficha histórica publicada por Uoldown (05/02/2015). Paquete, firma y arquitectura no verificados por Dash Launcher; abre la fuente externa y comprueba los datos antes de instalar."
+        "notes": "La página de Uoldown muestra esta versión bajo el título Geometry Dash. Dash Launcher no ha verificado el package ID, firma, arquitectura ni procedencia del APK; abre la ficha externa y comprueba esos datos antes de instalar."
       },
       {
         "id": "gd-1.81-uoldown",
@@ -112,7 +112,7 @@
         "platform": "Android",
         "distribution_authorized": false,
         "download_enabled": false,
-        "notes": "Ficha histórica publicada por Uoldown (16/08/2014). Paquete, firma y arquitectura no verificados por Dash Launcher; abre la fuente externa y comprueba los datos antes de instalar."
+        "notes": "La página de Uoldown muestra esta versión bajo el título Geometry Dash. Dash Launcher no ha verificado el package ID, firma, arquitectura ni procedencia del APK; abre la ficha externa y comprueba esos datos antes de instalar."
       },
       {
         "id": "gd-1.61-uoldown",
@@ -124,7 +124,7 @@
         "platform": "Android",
         "distribution_authorized": false,
         "download_enabled": false,
-        "notes": "Ficha histórica publicada por Uoldown (21/03/2014). Paquete, firma y arquitectura no verificados por Dash Launcher; abre la fuente externa y comprueba los datos antes de instalar."
+        "notes": "La página de Uoldown muestra esta versión bajo el título Geometry Dash. Dash Launcher no ha verificado el package ID, firma, arquitectura ni procedencia del APK; abre la ficha externa y comprueba esos datos antes de instalar."
       }
     ]
   }
