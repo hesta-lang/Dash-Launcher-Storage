@@ -69,6 +69,13 @@
             "sha256": {
               "type": "string",
               "pattern": "^[a-fA-F0-9]{64}$"
+            },
+            "packageName": {
+              "const": "com.robtopx.geometryjump"
+            },
+            "signingCertificateSha256": {
+              "type": "string",
+              "pattern": "^[a-fA-F0-9]{64}$"
             }
           },
           "allOf": [
@@ -87,7 +94,9 @@
                 "required": [
                   "url",
                   "sizeBytes",
-                  "sha256"
+                  "sha256",
+                  "packageName",
+                  "signingCertificateSha256"
                 ]
               }
             },
@@ -111,6 +120,30 @@
                   "url": {
                     "pattern": "^https://(play\\\\.google\\\\.com|uoldown\\\\.com|www\\\\.uoldown\\\\.com|apkcombo\\\\.com|www\\\\.apkcombo\\\\.com)/"
                   }
+                },
+                "not": {
+                  "anyOf": [
+                    {
+                      "required": [
+                        "packageName"
+                      ]
+                    },
+                    {
+                      "required": [
+                        "signingCertificateSha256"
+                      ]
+                    },
+                    {
+                      "required": [
+                        "sizeBytes"
+                      ]
+                    },
+                    {
+                      "required": [
+                        "sha256"
+                      ]
+                    }
+                  ]
                 }
               }
             }
