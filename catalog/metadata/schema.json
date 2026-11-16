@@ -118,7 +118,7 @@
                 ],
                 "properties": {
                   "url": {
-                    "pattern": "^https://(play\\\\.google\\\\.com|uoldown\\\\.com|www\\\\.uoldown\\\\.com|apkcombo\\\\.com|www\\\\.apkcombo\\\\.com)/"
+                    "pattern": "^https://(play\\.google\\.com|uoldown\\.com|www\\.uoldown\\.com|apkcombo\\.com|www\\.apkcombo\\.com)/"
                   }
                 },
                 "not": {
