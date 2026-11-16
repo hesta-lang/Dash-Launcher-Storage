@@ -2,7 +2,7 @@
   "id": "gd-2.011-apkcombo",
   "description": "Ficha histórica de APKCombo para Geometry Dash, versión 2.011 (2015). El catálogo solo enlaza la ficha externa; no verifica el APK ni permite descargarlo desde Dash Launcher.",
   "platform": "android",
-  "minAndroidApi": 23,
+  "minAndroidApi": 26,
   "supportedAbis": [],
   "artifact": {
     "provider": "external-page",
