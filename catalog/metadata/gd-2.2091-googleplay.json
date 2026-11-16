@@ -2,7 +2,7 @@
   "id": "gd-2.2091-googleplay",
   "description": "Referencia de Geometry Dash 2.2091 para Android. La versión exacta debe confirmarse en Google Play antes de instalar o actualizar; Dash Launcher solo abre la ficha oficial.",
   "platform": "android",
-  "minAndroidApi": 23,
+  "minAndroidApi": 26,
   "supportedAbis": [],
   "artifact": {
     "provider": "external-page",
