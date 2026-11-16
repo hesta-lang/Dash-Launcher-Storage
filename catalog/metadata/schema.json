@@ -129,9 +129,15 @@
               "provider": {
                 "const": "direct"
               }
-            }
+            },
+            "required": [
+              "provider"
+            ]
           }
-        }
+        },
+        "required": [
+          "artifact"
+        ]
       },
       "then": {
         "properties": {
