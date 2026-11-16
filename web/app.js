@@ -51,15 +51,19 @@
     list.innerHTML = entries.map((entry) => {
       const source = safeHttpsUrl(entry.source);
       const channelClass = activeChannel === "stable" ? "channel-stable" : (activeChannel === "beta" ? "channel-beta" : "");
-      const digest = entry.sha256 ? "SHA-256 " + escapeHtml(entry.sha256.slice(0, 12)) + "…" : "SHA-256 pendiente";
+      const isExternalReference = entry.entry_type === "external_reference";
+      const digest = isExternalReference
+        ? "Referencia externa · sin APK alojado"
+        : (entry.sha256 ? "SHA-256 " + escapeHtml(entry.sha256.slice(0, 12)) + "…" : "SHA-256 pendiente");
       const size = Number.isInteger(entry.size_bytes) && entry.size_bytes > 0 ? (entry.size_bytes / 1048576).toFixed(1) + " MB" : "";
       return '<article class="version-card"><div class="version-main"><div class="version-icon">⬡</div><div class="version-name"><strong>' +
         escapeHtml(entry.name) + " · " + escapeHtml(entry.version) +
         '</strong><small>' + escapeHtml(entry.id) + '</small><div class="version-tags"><span class="mini-tag ' + channelClass + '">' +
         escapeHtml(activeChannel.toUpperCase()) + '</span>' + (size ? '<span class="mini-tag">' + size + '</span>' : "") +
         (entry.platform ? '<span class="mini-tag">' + escapeHtml(entry.platform) + '</span>' : "") +
+        (isExternalReference ? '<span class="mini-tag">No descargable desde Dash Launcher</span>' : "") +
         '</div></div></div><div class="version-actions"><span class="version-digest">' + digest +
-        '</span>' + (source ? '<a class="source-button" href="' + escapeHtml(source) + '" target="_blank" rel="noopener noreferrer">Abrir origen ↗</a>' : '<span class="mini-tag">Origen no válido</span>') +
+        '</span>' + (source ? '<a class="source-button" href="' + escapeHtml(source) + '" target="_blank" rel="noopener noreferrer">' + (isExternalReference ? "Abrir proveedor ↗" : "Abrir origen ↗") + '</a>' : '<span class="mini-tag">Origen no válido</span>') +
         '</div></article>';
     }).join("");
   }
