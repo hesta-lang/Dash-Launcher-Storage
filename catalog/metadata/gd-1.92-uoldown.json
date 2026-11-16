@@ -2,7 +2,7 @@
   "id": "gd-1.92-uoldown",
   "description": "Ficha histórica de Uoldown para la versión 1.92. La arquitectura y la firma del archivo no están verificadas por Dash Launcher; comprueba los datos en el proveedor antes de instalar.",
   "platform": "android",
-  "minAndroidApi": 23,
+  "minAndroidApi": 26,
   "supportedAbis": [],
   "artifact": {
     "provider": "external-page",
